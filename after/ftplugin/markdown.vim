@@ -28,6 +28,8 @@ au BufEnter *.md filetype indent on
 " =========================
 
 setlocal autoindent
+" Automatically continue blockquote on line break
+setlocal comments+=b:>
 setlocal nofoldenable foldmethod=indent
 " Indenting in lists and blockquotes with tab
 setlocal tabstop=3
@@ -39,7 +41,7 @@ setlocal shiftwidth=2
 setlocal formatlistpat=^\\s*\\d\\+[:.)]\\s*
 
 " Format numbered lists correctly with "gq" and "gw"
-setlocal formatoptions+=n
+setlocal formatoptions=tcqlnr
 
 " Make headings
 " -------------
