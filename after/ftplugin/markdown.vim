@@ -3,16 +3,24 @@
 " Maintainer:   viniciusban
 
 
-" =================================
-" Undo configs made by vim-polyglot
-" =================================
-
-setlocal indentexpr=
-setlocal formatoptions-=r
-setlocal formatoptions+=c
-setlocal comments-=b:*
-setlocal comments-=b:+
-setlocal comments-=b:-
+" Avoid loading indent file.
+"
+" Not only for markdown, but for all filetypes. That's how vim works.
+"
+" I disable loading indent file for markdown because:
+"
+"   1. vim-polyglot erroneously set configs in indent file;
+"   2. Theses configs messes with list formatting;
+"   3. "vim-polyglot/after/indent" is loaded after this script.
+"
+" Thus, the whole process is:
+"
+"   1. Read the markdown file;
+"   2. Run this script (disable ident file);
+"   3. Load the markdown file to buffer;
+"   4. Re-enable filetype for all filetypes in "BufEnter" event.
+filetype indent off
+au BufEnter *.md filetype indent on
 
 
 " =========================
