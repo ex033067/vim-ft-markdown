@@ -20,7 +20,11 @@
 "   3. Load the markdown file to buffer;
 "   4. Re-enable filetype for all filetypes in "BufEnter" event.
 filetype indent off
-au BufEnter *.md filetype indent on
+
+augroup vim-ft-markdown
+    autocmd!
+    autocmd BufEnter *.{md,mdown,mkd,mkdn,markdown,mdwn} filetype indent on
+augroup END
 
 
 " =========================
