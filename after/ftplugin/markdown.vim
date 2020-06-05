@@ -53,15 +53,11 @@ setlocal formatlistpat=^\\s*\\d\\+[:.)]\\s*
 setlocal formatoptions=tcqlnr
 
 " Make headings
-" -------------
 nmap <silent> <buffer> <localleader>1 :let x=substitute(getline("."), "^#* *", "# ", "")<CR>:let x=substitute(x, " *#*$", " #", "")<CR>:call setline(line("."), x)<CR>
 nmap <silent> <buffer> <localleader>2 :let x=substitute(getline("."), "^#* *", "## ", "")<CR>:let x=substitute(x, " *#*$", " ##", "")<CR>:call setline(line("."), x)<CR>
 nmap <silent> <buffer> <localleader>3 :let x=substitute(getline("."), "^#* *", "### ", "")<CR>:let x=substitute(x, " *#*$", "", "")<CR>:call setline(line("."), x)<CR>
 nmap <silent> <buffer> <localleader>4 :let x=substitute(getline("."), "^#* *", "#### ", "")<CR>:let x=substitute(x, " *#*$", "", "")<CR>:call setline(line("."), x)<CR>
 
-" Navigate through headings
-" -------------------------
-
-" Next/previous heading (any level)
+" Go to next/previous heading (any level)
 nmap <silent> <buffer>  ]] :call search("^#\\+ ", "Wzs")<CR>
 nmap <silent> <buffer>  [[ :call search("^#\\+ ", "bWzs")<CR>
