@@ -38,7 +38,7 @@ let g:markdown_folding=1
 setlocal foldlevel=1
 
 " Automatically continue blockquote on line break
-setlocal comments+=b:>
+setlocal comments=n:>,b:>
 
 " Indenting in lists and blockquotes with tab
 setlocal tabstop=3
