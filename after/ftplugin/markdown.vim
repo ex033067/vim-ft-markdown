@@ -46,10 +46,10 @@ setlocal tabstop=3
 " Indenting with >>
 setlocal shiftwidth=2
 
-" Numbered lists: a number followed by ":", "." or ")" and a space
-setlocal formatlistpat=^\\s*\\d\\+[:.)]\\s*
+" Numbered and unnumbered lists
+setlocal formatlistpat=^\\s*\\d\\+[:.)]\\s\\\|^\\s*[-*+]\\s
 
-" Format numbered lists correctly with "gq" and "gw"
+" Format lists correctly with "gq" and "gw"
 setlocal formatoptions=tcqlnr
 
 " Make headings
