@@ -53,8 +53,8 @@ setlocal formatlistpat=^\\s*\\d\\+[:.)]\\s\\\|^\\s*[-*+]\\s
 setlocal formatoptions=tcqlnr
 
 " Make headings
-nmap <silent> <buffer> <localleader>1 :let x=substitute(getline("."), "^#* *", "# ", "")<CR>:let x=substitute(x, " *#*$", " #", "")<CR>:call setline(line("."), x)<CR>
-nmap <silent> <buffer> <localleader>2 :let x=substitute(getline("."), "^#* *", "## ", "")<CR>:let x=substitute(x, " *#*$", " ##", "")<CR>:call setline(line("."), x)<CR>
+nmap <silent> <buffer> <localleader>1 :let x=substitute(getline("."), "^#* *", "# ", "")<CR>:let x=substitute(x, " *#*$", "", "")<CR>:call setline(line("."), x)<CR>
+nmap <silent> <buffer> <localleader>2 :let x=substitute(getline("."), "^#* *", "## ", "")<CR>:let x=substitute(x, " *#*$", "", "")<CR>:call setline(line("."), x)<CR>
 nmap <silent> <buffer> <localleader>3 :let x=substitute(getline("."), "^#* *", "### ", "")<CR>:let x=substitute(x, " *#*$", "", "")<CR>:call setline(line("."), x)<CR>
 nmap <silent> <buffer> <localleader>4 :let x=substitute(getline("."), "^#* *", "#### ", "")<CR>:let x=substitute(x, " *#*$", "", "")<CR>:call setline(line("."), x)<CR>
 
