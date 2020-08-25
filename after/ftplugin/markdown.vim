@@ -69,3 +69,6 @@ nmap <silent> <buffer>  ]2 :call search("^## ", "Wzs")<CR>
 nmap <silent> <buffer>  [2 :call search("^## ", "bWzs")<CR>
 nmap <silent> <buffer>  ]3 :call search("^### ", "Wzs")<CR>
 nmap <silent> <buffer>  [3 :call search("^### ", "bWzs")<CR>
+
+" Add a codeblock paragraph
+autocmd FileType markdown imap <buffer> <localleader>` <Esc><Esc>a```<CR><CR>```<Esc>ka
