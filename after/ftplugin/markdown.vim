@@ -61,3 +61,11 @@ nmap <silent> <buffer> <localleader>4 :let x=substitute(getline("."), "^#* *", "
 " Go to next/previous heading (any level)
 nmap <silent> <buffer>  ]] :call search("^#\\+ ", "Wzs")<CR>
 nmap <silent> <buffer>  [[ :call search("^#\\+ ", "bWzs")<CR>
+
+" Go to next/previous heading (of some level)
+nmap <silent> <buffer>  ]1 :call search("^# ", "Wzs")<CR>
+nmap <silent> <buffer>  [1 :call search("^# ", "bWzs")<CR>
+nmap <silent> <buffer>  ]2 :call search("^## ", "Wzs")<CR>
+nmap <silent> <buffer>  [2 :call search("^## ", "bWzs")<CR>
+nmap <silent> <buffer>  ]3 :call search("^### ", "Wzs")<CR>
+nmap <silent> <buffer>  [3 :call search("^### ", "bWzs")<CR>
