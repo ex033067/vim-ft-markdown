@@ -53,10 +53,10 @@ setlocal formatlistpat=^\\s*\\d\\+[:.)]\\s\\\|^\\s*[-*+]\\s
 setlocal formatoptions=tcqlnr
 
 " Make headings
-nmap <silent> <buffer> <localleader>1 :let x=substitute(getline("."), "^#* *", "# ", "")<CR>:let x=substitute(x, " *#*$", "", "")<CR>:call setline(line("."), x)<CR>
-nmap <silent> <buffer> <localleader>2 :let x=substitute(getline("."), "^#* *", "## ", "")<CR>:let x=substitute(x, " *#*$", "", "")<CR>:call setline(line("."), x)<CR>
-nmap <silent> <buffer> <localleader>3 :let x=substitute(getline("."), "^#* *", "### ", "")<CR>:let x=substitute(x, " *#*$", "", "")<CR>:call setline(line("."), x)<CR>
-nmap <silent> <buffer> <localleader>4 :let x=substitute(getline("."), "^#* *", "#### ", "")<CR>:let x=substitute(x, " *#*$", "", "")<CR>:call setline(line("."), x)<CR>
+nmap <silent> <buffer> <localleader>1 :keeppatterns :s/^#* */# /<CR>:keeppatterns :s/ *#*$//<CR>
+nmap <silent> <buffer> <localleader>2 :keeppatterns :s/^#* */## /<CR>:keeppatterns :s/ *#*$//<CR>
+nmap <silent> <buffer> <localleader>3 :keeppatterns :s/^#* */### /<CR>:keeppatterns :s/ *#*$//<CR>
+nmap <silent> <buffer> <localleader>4 :keeppatterns :s/^#* */#### /<CR>:keeppatterns :s/ *#*$//<CR>
 
 " Go to next/previous heading (any level)
 nmap <silent> <buffer>  ]] :call search("^#\\+ ", "Wzs")<CR>
