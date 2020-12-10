@@ -71,4 +71,4 @@ nmap <silent> <buffer>  ]3 :normal m'<CR> :keeppatterns /^### /<CR>
 nmap <silent> <buffer>  [3 :normal m'<CR> :keeppatterns ?^### ?<CR>
 
 " Add a codeblock paragraph
-autocmd FileType markdown imap <buffer> <localleader>` <Esc><Esc>a```<CR><CR>```<Esc>ka
+autocmd FileType markdown imap <buffer> <localleader>` ```<CR><CR>```<C-O>k
