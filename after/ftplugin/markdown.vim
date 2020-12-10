@@ -63,12 +63,12 @@ nnoremap <silent> <buffer>  ]] :normal m'<CR> :keeppatterns /^#\+ /<CR>
 nnoremap <silent> <buffer>  [[ :normal m'<CR> :keeppatterns ?^#\+ ?<CR>
 
 " Go to next/previous heading (of some level)
-nnoremmap <silent> <buffer>  ]1 :normal m'<CR> :keeppatterns /^# /<CR>
-nnoremmap <silent> <buffer>  [1 :normal m'<CR> :keeppatterns ?^# ?<CR>
-nnoremmap <silent> <buffer>  ]2 :normal m'<CR> :keeppatterns /^## /<CR>
-nnoremmap <silent> <buffer>  [2 :normal m'<CR> :keeppatterns ?^## ?<CR>
-nnoremmap <silent> <buffer>  ]3 :normal m'<CR> :keeppatterns /^### /<CR>
-nnoremmap <silent> <buffer>  [3 :normal m'<CR> :keeppatterns ?^### ?<CR>
+nnoremap <silent> <buffer>  ]1 :normal m'<CR> :keeppatterns /^# /<CR>
+nnoremap <silent> <buffer>  [1 :normal m'<CR> :keeppatterns ?^# ?<CR>
+nnoremap <silent> <buffer>  ]2 :normal m'<CR> :keeppatterns /^## /<CR>
+nnoremap <silent> <buffer>  [2 :normal m'<CR> :keeppatterns ?^## ?<CR>
+nnoremap <silent> <buffer>  ]3 :normal m'<CR> :keeppatterns /^### /<CR>
+nnoremap <silent> <buffer>  [3 :normal m'<CR> :keeppatterns ?^### ?<CR>
 
 " Add a codeblock paragraph
 autocmd FileType markdown inoremap <buffer> <localleader>` ```<CR><CR>```<C-O>k
