@@ -59,16 +59,16 @@ nmap <silent> <buffer> <localleader>3 :keeppatterns :s/^#* */### /<CR>:keeppatte
 nmap <silent> <buffer> <localleader>4 :keeppatterns :s/^#* */#### /<CR>:keeppatterns :s/ *#*$//<CR>
 
 " Go to next/previous heading (any level)
-nmap <silent> <buffer>  ]] :call search('^#\+ ')<CR>
-nmap <silent> <buffer>  [[ :call search('^#\+ ', "bz")<CR>
+nmap <silent> <buffer>  ]] :normal m'<CR> :keeppatterns /^#\+ /<CR>
+nmap <silent> <buffer>  [[ :normal m'<CR> :keeppatterns ?^#\+ ?<CR>
 
 " Go to next/previous heading (of some level)
-nmap <silent> <buffer>  ]1 :call search("^# ")<CR>
-nmap <silent> <buffer>  [1 :call search("^# ", "bz")<CR>
-nmap <silent> <buffer>  ]2 :call search("^## ")<CR>
-nmap <silent> <buffer>  [2 :call search("^## ", "bz")<CR>
-nmap <silent> <buffer>  ]3 :call search("^### ")<CR>
-nmap <silent> <buffer>  [3 :call search("^### ", "bz")<CR>
+nmap <silent> <buffer>  ]1 :normal m'<CR> :keeppatterns /^# /<CR>
+nmap <silent> <buffer>  [1 :normal m'<CR> :keeppatterns ?^# ?<CR>
+nmap <silent> <buffer>  ]2 :normal m'<CR> :keeppatterns /^## /<CR>
+nmap <silent> <buffer>  [2 :normal m'<CR> :keeppatterns ?^## ?<CR>
+nmap <silent> <buffer>  ]3 :normal m'<CR> :keeppatterns /^### /<CR>
+nmap <silent> <buffer>  [3 :normal m'<CR> :keeppatterns ?^### ?<CR>
 
 " Add a codeblock paragraph
 autocmd FileType markdown imap <buffer> <localleader>` <Esc><Esc>a```<CR><CR>```<Esc>ka
